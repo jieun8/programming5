@@ -1,0 +1,12 @@
+<form action='{% url "post:post_upload" %}' method="post">
+{% csrf_token %}
+    <div>
+    <label for="title">제목</label>
+    <input maxlength="100" name="title" placeholder="제목" required="required" title="" type="text" />
+    </div>
+    <div>
+    <label for="text">내용</label>
+    <textarea cols="40" name="text" placeholder="내용을 입력하세요" required="required" rows="10" title=""></textarea>
+    </div>
+    <input type="submit" value="올리기" />
+</form>
